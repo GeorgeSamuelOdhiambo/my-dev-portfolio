@@ -2,7 +2,6 @@ import React from "react";
 import { SkillBars } from "../configs";
 import { Container, Row, Progress, Col } from "reactstrap";
 import { Fade } from "react-awesome-reveal";
-import GreetingLottie from "../components/DisplayLottie";
 
 const Proficiency = () => {
   return (

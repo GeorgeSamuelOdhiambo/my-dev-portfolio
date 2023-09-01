@@ -19,6 +19,7 @@ export default function Home() {
         `https://api.github.com/users/${openSource.githubUserName}`
       ).then((res) => res.json());
       var { avatar_url, bio, location } = githubProfileData;
+      console.log({ avatar_url, bio, location });
       SetGithubProfileData({ avatar_url, bio, location });
     };
 
