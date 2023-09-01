@@ -9,7 +9,7 @@ const GithubProfileCard = ({ avatar_url, bio, location }) => {
         <div className="p-2">
           <Row className="">
             <Col className="order-lg-2" lg="4">
-              <img
+              <image
                 src={avatar_url}
                 style={{ width: '200px' }}
                 alt=""

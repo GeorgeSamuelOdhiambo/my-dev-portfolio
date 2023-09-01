@@ -13,7 +13,7 @@ const Proficiency = () => {
             <h1 className="h2">Proficiency</h1>
             {SkillBars.map((skill) => {
               return (
-                <Col lg="6">
+                <Col lg="6" key={skill.Stack}>
                   <div className="progress-info" key={skill.Stack}>
                     <div className="progress-label">
                       <span>{skill.Stack}</span>

@@ -25,7 +25,7 @@ const ExperienceCard = ({
           className="shadow-lg--hover mb-3 shadow border-0 text-center rounded"
         >
           <CardBody className="">
-            <img
+            <image
               src={companyLogo}
               style={{
                 objectFit: "cover",

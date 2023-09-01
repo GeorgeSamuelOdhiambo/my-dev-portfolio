@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import { openSource, showContactUs } from "../configs";
+import { openSource } from "../configs";
 import GithubProfileCard from "@/cards/GithubProfileCard";
 import Navigation from "@/components/Navigation";
 import Greetings from "@/components/Greetings";
 import Skills from "@/components/Skills";
+import Proficiency from "@/components/Proficiency";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
@@ -32,6 +33,7 @@ export default function Home() {
       <Experience />
       <Projects />
       <ContactUs />
+      <Proficiency />
       <GithubProfileCard {...githubProfileData} />
     </div>
   );
