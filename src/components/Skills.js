@@ -7,7 +7,7 @@ import { skillsSection } from "../configs";
 const Skills = () => {
   return (
     skillsSection && (
-      <Container className="text-center section section-lg">
+      <Container className="text-center section-lg">
         <h3 className="h3">{skillsSection.title}</h3>
         <p className="lead">{skillsSection.subTitle}</p>
         <Row>

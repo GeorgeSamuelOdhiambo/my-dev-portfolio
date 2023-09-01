@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import { greetings } from '../configs';
-import { Button, Container, Row, Col } from 'reactstrap';
-import GreetingLottie from '../components/DisplayLottie';
-import SocialLinks from '../components/SocialLinks';
-// import {} from '../../public/lottie'
+import React, { useEffect } from "react";
+import { greetings } from "../configs";
+import { Button, Container, Row, Col } from "reactstrap";
+import GreetingLottie from "../components/DisplayLottie";
+import SocialLinks from "../components/SocialLinks";
 
 const Greetings = () => {
   useEffect(() => {
@@ -30,9 +29,9 @@ const Greetings = () => {
             <div className="col px-0">
               <Row>
                 <Col lg="7">
-                  <h1 className="display-3 text-white">
-                    {greetings.title + ' '}
-                  </h1>
+                  <h2 className="display-3 text-white">
+                    {greetings.title + " "}
+                  </h2>
                   <p className="lead text-white">{greetings.description}</p>
                   <SocialLinks />
                   {greetings.resumeLink && (
@@ -51,7 +50,7 @@ const Greetings = () => {
                   )}
                 </Col>
                 <Col lg="5">
-                  <GreetingLottie animationPath="../../public/lottie/coding.json" />
+                  <GreetingLottie animationPath="./coding.json" />
                 </Col>
               </Row>
             </div>

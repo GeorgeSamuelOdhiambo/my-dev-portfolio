@@ -4,7 +4,7 @@ export const greetings = {
   name: "Odhiambo George",
   title: "Hi all, I'm George",
   description:
-    "I'm passionate Full Stack web developer having an experience of web applications with Python, Django, React.js, Next.js and Blockchain development on Ethereum, Solidity, Web3.js, Moralis, and Brownie Framework.",
+    "I am a dedicated software developer with a wealth of experience in developing web applications using a wide range of technologies, including JavaScript, Node.js, React.js, Next.js, and Java (Spring Boot). In addition I have expertise in cloud computing, particularly with Azure, and am proficient in working with various databases, including MySQL, PostgreSQL, MongoDB, Firebase.",
   resumeLink:
     "https://docs.google.com/document/d/1WSADYSzVQCtHlAkHqPtEFvk23apzYvpoz1mixdWRvO8/",
 };
@@ -26,17 +26,18 @@ export const socialLinks = {
 
 export const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "",
   data: [
     {
       title: "Full Stack Development",
-      lottieAnimationFile: "/lottie/skills/fullstack.json", // Path of Lottie Animation JSON File
+      lottieAnimationFile: "/lottie/skills/fullstack.json",
       skills: [
         emoji(
           "⚡ Building responsive Single-Page-Apps (SPA) & PWA in React.js"
         ),
         emoji("⚡ Building responsive static websites using Next.js"),
-        emoji("⚡ Building RESTful APIs in Django & Django REST Framework"),
+        emoji("⚡ Building RESTful APIs in NodeJs & SpringBoot application"),
+        emoji("⚡ Databases: Well-versed in working with MongoDB, PostgreSQL, and MySQL."),
       ],
       softwareSkills: [
         {
@@ -143,33 +144,37 @@ export const skillsSection = {
 
 export const SkillBars = [
   {
-    Stack: "Frontend/Design", //Insert stack or technology you have experience in
-    progressPercentage: "90", //Insert relative proficiency in percentage
+    Stack: "Javascript (NodeJs)",
+    progressPercentage: "90",
   },
   {
-    Stack: "Backend",
+    Stack: "API Integration",
+    progressPercentage: "80",
+  },
+  {
+    Stack: "Java (SpringBoot)",
     progressPercentage: "70",
   },
   {
-    Stack: "Programming",
+    Stack: "ReactJs and NextJs",
     progressPercentage: "60",
   },
 ];
 
 export const educationInfo = [
   {
-    schoolName: "Usenge High School",
-    subHeader: "Kenya Certificate of Secondary Education",
-    duration: "From 2014 to 2017",
-    desc: "Participated in the research of XXX and published 3 papers.",
+    schoolName: "Maseno University",
+    subHeader: "BSc in Computer Technology",
+    duration: "From 2018 to 2022",
+    desc: "I gained a comprehensive understanding of computer science and technology. This program equipped me with valuable knowledge and skills in areas such as programming, software development and computer networks.",
     grade: "",
     descBullets: [],
   },
   {
-    schoolName: "Maseno University",
-    subHeader: "BSc in Computer Technology",
-    duration: "From 2018 to 2022",
-    desc: "Participated in the research of XXX and published 3 papers.",
+    schoolName: "Usenge High School",
+    subHeader: "Kenya Certificate of Secondary Education",
+    duration: "From 2014 to 2017",
+    desc: "At Usenge High School, I pursued my Kenya Certificate of Secondary Education from 2014 to 2017, during which I gained valuable knowledge and skills that have contributed to my educational and personal growth.",
     grade: "",
     descBullets: [],
   },
@@ -204,25 +209,24 @@ export const experience = [
 
 export const projects = [
   {
-    name: "developer-portfolio",
-    desc: "Software Developer Portfolio Template built with react.js and next.js bootstrap that helps you showcase your work and skills as a software developer.",
-    github: "https://github.com/1hanzla100/developer-portfolio",
-    link: "https://developer-portfolio-1hanzla100.vercel.app/",
+    name: "T24 Bridge",
+    desc: "The T24 Bridge is a robust and versatile integration solution designed to seamlessly connect T24 core banking systems with external applications, enabling efficient data exchange, real-time updates, and enhanced operational flexibility for financial institutions.",
+    github: "https://github.com/GeorgeSamuelOdhiambo",
   },
   {
-    name: "AtlasMart",
-    desc: "With Atlas Mart, it’s easy to find the products with the best price and ship them straight to your door.",
-    github: "https://github.com/1hanzla100/Django-React-Marketplace",
+    name: "Poultry Management",
+    desc: "The poultry management system efficiently tracks poultry, manages expenses, schedules vaccinations, monitors investments, analyzes profits, oversees incubation periods, optimizes feeding for poultry farmers e.t.c",
+    github: "https://github.com/GeorgeSamuelOdhiambo",
   },
   {
-    name: "Technota (Forum)",
-    desc: "Get hands-on experience in technical skills with Technota",
-    github: "https://github.com/1hanzla100/django-react-forum",
+    name: "Bill Reminder",
+    desc: "The Bill Reminder System is a user-friendly solution that helps individuals and businesses effortlessly keep track of their upcoming bills, ensuring timely payments, avoiding late fees, and maintaining financial stability.",
+    github: "https://github.com/GeorgeSamuelOdhiambo",
   },
   {
-    name: "Shopaza (Ecommerce)",
-    desc: "Now your reach to all your favorite entertainment and luxury items is just one touch apart",
-    github: "https://github.com/1hanzla100/Django-ecommerce",
+    name: "API Integration",
+    desc: "Seamlessly connects multiple essential services, including STK push for mobile payments, Mastercard for secure transactions, SMS for instant notifications, email for communication, and POS for point-of-sale operations, providing businesses with a unified and efficient platform for their diverse digital needs.",
+    github: "https://github.com/GeorgeSamuelOdhiambo",
   },
 ];
 

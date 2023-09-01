@@ -31,9 +31,9 @@ export default function Home() {
       <Skills />
       <Education />
       <Experience />
-      <Projects/>
-      <ContactUs/>
-      <Proficiency/>
+      <Projects />
+      <ContactUs />
+      {/* <Proficiency /> */}
       <GithubProfileCard {...githubProfileData} />
     </div>
   );

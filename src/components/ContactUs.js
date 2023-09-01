@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import classnames from "classnames";
 import {
@@ -16,7 +16,7 @@ import {
 import Alert from "@/cards/Alerts";
 
 export const ContactUs = () => {
-  const form = useRef({
+  const [form, setFormData] = useState({
     user_name: "",
     user_email: "",
     user_message: "",
@@ -24,8 +24,10 @@ export const ContactUs = () => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    form.current[name] = value;
+    setFormData({ ...form, [name]: value });
   };
+
+  const [show, setShow] = useState(false);
   const [alert, setAlert] = useState({
     color: "",
     icon: "",
@@ -44,14 +46,23 @@ export const ContactUs = () => {
     message: " Oops! Something went wrong. Please try again later.",
   };
 
+  useEffect(() => {
+    if (show) {
+      setTimeout(function () {
+        setShow(false);
+        setFormData({
+          user_name: "",
+          user_email: "",
+          user_message: "",
+        });
+      }, 2000);
+    }
+  }, [show]);
+
   const sendEmail = (e) => {
     e.preventDefault();
-    const { user_name, user_email, user_message } = form.current;
-    console.log("Name:", user_name);
-    console.log("Email:", user_email);
-    console.log("Message:", user_message);
-
-    if (form.current) {
+    const { user_name, user_email, user_message } = form;
+    if (form) {
       emailjs
         .send(
           "service_1o2nwyj",
@@ -66,16 +77,11 @@ export const ContactUs = () => {
         .then(
           (result) => {
             setAlert(successAlert);
-            form.current.user_name = "";
-            form.current.user_email = "";
-            form.current.user_message = "";
+            setShow(true);
           },
           (error) => {
-            console.log(error.text);
             setAlert(errorAlert);
-            form.current.user_name = "";
-            form.current.user_email = "";
-            form.current.user_message = "";
+            setShow(true);
           }
         );
     }
@@ -84,7 +90,7 @@ export const ContactUs = () => {
     <>
       <section className="section section-lg section-shaped">
         <form onSubmit={sendEmail}>
-          {alert && (
+          {show && (
             <Alert
               color={alert.color}
               icon={alert.icon}
@@ -106,6 +112,8 @@ export const ContactUs = () => {
                           <i className="ni ni-user-run" />
                         </InputGroupText>
                         <Input
+                          required
+                          value={form.user_name}
                           onChange={handleInputChange}
                           placeholder="Your name"
                           type="text"
@@ -119,6 +127,8 @@ export const ContactUs = () => {
                           <i className="ni ni-email-83" />
                         </InputGroupText>
                         <Input
+                          required
+                          value={form.user_email}
                           onChange={handleInputChange}
                           placeholder="Email address"
                           name="user_email"
@@ -128,6 +138,8 @@ export const ContactUs = () => {
                     </FormGroup>
                     <FormGroup className="mb-4">
                       <Input
+                        required
+                        value={form.user_message}
                         onChange={handleInputChange}
                         className="form-control-alternative"
                         cols="80"
