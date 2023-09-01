@@ -32,7 +32,6 @@ export default function Home() {
       <Experience />
       <Projects />
       <ContactUs />
-      {/* <Proficiency /> */}
       <GithubProfileCard {...githubProfileData} />
     </div>
   );
