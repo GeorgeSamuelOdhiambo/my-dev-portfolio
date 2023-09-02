@@ -3,7 +3,6 @@ import { greetings } from "../configs";
 import { Button, Container, Row, Col } from "reactstrap";
 import GreetingLottie from "../components/DisplayLottie";
 import SocialLinks from "../components/SocialLinks";
-import codingPlay from "./coding.json";
 
 const Greetings = () => {
   useEffect(() => {
@@ -14,7 +13,7 @@ const Greetings = () => {
   return (
     <main>
       <div className="position-relative">
-        <section className="section section-lg section-shaped pb-250">
+        <section className="section section-lg section-shaped">
           <div className="shape shape-style-1 bg-gradient-info">
             <span />
             <span />
@@ -51,7 +50,7 @@ const Greetings = () => {
                   )}
                 </Col>
                 <Col lg="5">
-                  <GreetingLottie animationPath={codingPlay} />
+                  <GreetingLottie />
                 </Col>
               </Row>
             </div>
